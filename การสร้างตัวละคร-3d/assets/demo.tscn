@@ -1,0 +1,100 @@
+[gd_scene load_steps=15 format=3 uid="uid://bemlmjtayntvq"]
+
+[ext_resource type="Script" uid="uid://bpenxek3uhagm" path="res://assets/demo.gd" id="1_amuei"]
+[ext_resource type="PackedScene" uid="uid://dgfxuvpcubavb" path="res://assets/Roblox_j.tscn" id="1_s02n5"]
+[ext_resource type="PackedScene" uid="uid://qf31q64l220y" path="res://assets/Street Straight Crack.glb" id="3_137jn"]
+[ext_resource type="PackedScene" uid="uid://r4xovo35b2qq" path="res://assets/Traffic Light.glb" id="4_uskw3"]
+[ext_resource type="PackedScene" uid="uid://yekd8v53tqiv" path="res://assets/Stop sign.glb" id="5_3xmef"]
+[ext_resource type="PackedScene" uid="uid://c6362q31r52t" path="res://assets/Car.glb" id="6_ehoep"]
+[ext_resource type="PackedScene" uid="uid://ginoyts67l22" path="res://assets/Dead Trees.glb" id="7_uskw3"]
+[ext_resource type="PackedScene" uid="uid://1xbydr60sy6b" path="res://assets/Plant.glb" id="8_ehoep"]
+[ext_resource type="PackedScene" uid="uid://dgn6485cpuftp" path="res://assets/Pine Trees.glb" id="9_50wl6"]
+[ext_resource type="PackedScene" uid="uid://dwjuely2cr1lq" path="res://assets/Mushroom.glb" id="10_50wl6"]
+[ext_resource type="PackedScene" uid="uid://cnsl4ilaejqnc" path="res://assets/Dead Tree.glb" id="10_yqfd4"]
+[ext_resource type="PackedScene" uid="uid://d1nfe4q56fged" path="res://assets/Flowers.glb" id="12_p3yuf"]
+[ext_resource type="PackedScene" uid="uid://b2aqiwh32hv8r" path="res://assets/Adventurer.fbx" id="13_th64v"]
+[ext_resource type="PackedScene" uid="uid://bt2f6gt50r4ug" path="res://assets/zombo.fbx" id="14_f7tf8"]
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_amuei")
+
+[node name="Ground" type="Node3D" parent="."]
+transform = Transform3D(5.45133, 0, 0, 0, 1, 0, 0, 0, 5.97131, -0.0708836, 0, 1.68102)
+
+[node name="Traffic Light" parent="Ground" instance=ExtResource("4_uskw3")]
+transform = Transform3D(0.488341, 0, 0, 0, 3.73647, 0, 0, 0, 0.167467, 3.7346, 0, -3.21525)
+
+[node name="Street Straight" parent="Ground" instance=ExtResource("3_137jn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.3, 0, 0, 0)
+
+[node name="Stop sign" parent="Ground" instance=ExtResource("5_3xmef")]
+transform = Transform3D(-2.80647e-10, 0, -0.00642045, 0, 0.035, 0, 0.00586136, 0, -2.56208e-10, -3.36507, 0, -0.281515)
+
+[node name="Car" parent="Ground" instance=ExtResource("6_ehoep")]
+transform = Transform3D(-0.027, 0, -3.7749e-09, 0, 0.118, 0, 4.07689e-09, 0, -0.025, 1.784, 0.5, 2.15253)
+
+[node name="Dead Trees" parent="Ground" instance=ExtResource("7_uskw3")]
+transform = Transform3D(-0.171187, 0, -0.0601813, 0, 0.999995, 0, 0.0659217, 0, -0.15628, -0.353501, 0, 0.0969219)
+
+[node name="Plant1" parent="Ground" instance=ExtResource("8_ehoep")]
+transform = Transform3D(0.183441, 0, 0, 0, 1, 0, 0, 0, 0.167467, 0.881903, 0, 1.40904)
+
+[node name="Trees1" parent="Ground" instance=ExtResource("9_50wl6")]
+transform = Transform3D(3, 0, 0, 0, 16.392, 0, 0, 0, 2.738, 6.2842, 0, -1.87873)
+
+[node name="Plant2" parent="Ground" instance=ExtResource("8_ehoep")]
+transform = Transform3D(0.183441, 0, 0, 0, 1, 0, 0, 0, 0.167467, -1.00657, 0, -0.152133)
+
+[node name="Trees2" parent="Ground" instance=ExtResource("9_50wl6")]
+transform = Transform3D(6.3, 0, 0, 0, 28.1, 0, 0, 0, 4.694, -0.964361, 0, -7.15191)
+
+[node name="Trees3" parent="Ground" instance=ExtResource("9_50wl6")]
+transform = Transform3D(3, 0, 0, 0, 16.392, 0, 0, 0, 2.738, -7.9057, 0, -1.87873)
+
+[node name="Dead Trees1" parent="Ground" instance=ExtResource("10_yqfd4")]
+transform = Transform3D(0.183441, 0, 0, 0, 1, 0, 0, 0, 0.167467, -4.49923, 0, -5.52599)
+
+[node name="Mushroom" parent="Ground" instance=ExtResource("10_50wl6")]
+transform = Transform3D(0.330194, 0, 0, 0, 1.8, 0, 0, 0, 0.301441, 1.3597, 0, 1.74715)
+
+[node name="Dead Trees2" parent="Ground" instance=ExtResource("10_yqfd4")]
+transform = Transform3D(0.0806401, 0, 0.0381885, 0, 0.5, 0, -0.0399647, 0, 0.0770561, 5.40274, 0, -1.74837)
+
+[node name="Dead Trees3" parent="Ground" instance=ExtResource("10_yqfd4")]
+transform = Transform3D(0.330194, 0, 0, 0, 1.8, 0, 0, 0, 0.301441, 7.27256, 0, -6.15765)
+
+[node name="Flowers1" parent="Ground" instance=ExtResource("12_p3yuf")]
+transform = Transform3D(-0.370517, 0, -0.406907, 0, 3, 0, 0.371474, 0, -0.338253, -5.14847, 0, -2.42641)
+
+[node name="Flowers2" parent="Ground" instance=ExtResource("12_p3yuf")]
+transform = Transform3D(-0.293953, 0, -0.46524, 0, 3, 0, 0.424727, 0, -0.268356, 5.41819, 0, -2.42641)
+
+[node name="Flowers3" parent="Ground" instance=ExtResource("12_p3yuf")]
+transform = Transform3D(-0.864539, 0, -0.949451, 0, 7, 0, 0.866773, 0, -0.789256, 0.494217, 0, -7.8689)
+
+[node name="RobloxMan" type="Node3D" parent="."]
+
+[node name="Roblox_j1" parent="RobloxMan" instance=ExtResource("1_s02n5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2925, 0, 0)
+
+[node name="Roblox_j2" parent="RobloxMan" instance=ExtResource("1_s02n5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.28902, 0, 0)
+
+[node name="Roblox_j3" parent="RobloxMan" instance=ExtResource("1_s02n5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.35417, 0, 0)
+
+[node name="Roblox_j4" parent="RobloxMan" instance=ExtResource("1_s02n5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8722, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.949655, 0.313296, 0, -0.313296, 0.949655, -0.539472, 6.54152, 18.9115)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.633651, 0.773619, 0, -0.773619, 0.633651, 0, 10.9829, 0)
+shadow_enabled = true
+
+[node name="Adventurer" parent="." instance=ExtResource("13_th64v")]
+transform = Transform3D(0.028343, -0.0282255, 1.23377e-09, -6.35006e-17, -1.74846e-09, -0.04, 0.0282255, 0.028343, -1.23891e-09, 0.25592, 0, 13.3983)
+
+[node name="zombo" parent="." instance=ExtResource("14_f7tf8")]
+transform = Transform3D(0.147262, 0, 1.4425, 0, 1.45, 0, -1.4425, 0, 0.147262, -2.70562, 0.6, 13.7917)
