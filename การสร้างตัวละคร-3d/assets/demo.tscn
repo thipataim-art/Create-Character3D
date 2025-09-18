@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bemlmjtayntvq"]
+[gd_scene load_steps=18 format=3 uid="uid://bemlmjtayntvq"]
 
 [ext_resource type="Script" uid="uid://bpenxek3uhagm" path="res://assets/demo.gd" id="1_amuei"]
 [ext_resource type="PackedScene" uid="uid://dgfxuvpcubavb" path="res://assets/Roblox_j.tscn" id="1_s02n5"]
@@ -14,6 +14,18 @@
 [ext_resource type="PackedScene" uid="uid://d1nfe4q56fged" path="res://assets/Flowers.glb" id="12_p3yuf"]
 [ext_resource type="PackedScene" uid="uid://b2aqiwh32hv8r" path="res://assets/Adventurer.fbx" id="13_th64v"]
 [ext_resource type="PackedScene" uid="uid://bt2f6gt50r4ug" path="res://assets/zombo.fbx" id="14_f7tf8"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_f7tf8"]
+
+[sub_resource type="Sky" id="Sky_vqg4p"]
+sky_material = SubResource("PanoramaSkyMaterial_f7tf8")
+
+[sub_resource type="Environment" id="Environment_mfxxg"]
+background_mode = 1
+background_color = Color(0.745608, 0.460393, 0.299914, 1)
+background_energy_multiplier = 1.85
+sky = SubResource("Sky_vqg4p")
+ambient_light_color = Color(1, 1, 1, 1)
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_amuei")
@@ -72,6 +84,9 @@ transform = Transform3D(-0.293953, 0, -0.46524, 0, 3, 0, 0.424727, 0, -0.268356,
 [node name="Flowers3" parent="Ground" instance=ExtResource("12_p3yuf")]
 transform = Transform3D(-0.864539, 0, -0.949451, 0, 7, 0, 0.866773, 0, -0.789256, 0.494217, 0, -7.8689)
 
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.949655, 0.313296, 0, -0.313296, 0.949655, -0.539472, 6.54152, 18.9115)
+
 [node name="RobloxMan" type="Node3D" parent="."]
 
 [node name="Roblox_j1" parent="RobloxMan" instance=ExtResource("1_s02n5")]
@@ -86,11 +101,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.35417, 0, 0)
 [node name="Roblox_j4" parent="RobloxMan" instance=ExtResource("1_s02n5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8722, 0, 0)
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.949655, 0.313296, 0, -0.313296, 0.949655, -0.539472, 6.54152, 18.9115)
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.633651, 0.773619, 0, -0.773619, 0.633651, 0, 10.9829, 0)
+light_energy = 0.7
 shadow_enabled = true
 
 [node name="Adventurer" parent="." instance=ExtResource("13_th64v")]
@@ -98,3 +111,6 @@ transform = Transform3D(0.028343, -0.0282255, 1.23377e-09, -6.35006e-17, -1.7484
 
 [node name="zombo" parent="." instance=ExtResource("14_f7tf8")]
 transform = Transform3D(0.147262, 0, 1.4425, 0, 1.45, 0, -1.4425, 0, 0.147262, -2.70562, 0.6, 13.7917)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_mfxxg")
